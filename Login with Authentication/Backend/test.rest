@@ -1,0 +1,12 @@
+GET http://localhost:2022/test
+
+
+###
+
+POST http://localhost:2022/posts/new
+Content-Type: application/json
+
+{
+  "title": "fist cvbdfbpost",
+  "content": "lorem ipsum dolor sit amet"
+}
