@@ -28,7 +28,7 @@ var usersController = {
               return res.status(500).json({ error: err })
             }
             else {
-              const user = new User({ //llamamos al constructor del userSchema
+              const user = new User({ 
                 email: req.body.email,
                 password: hash
               })
@@ -43,7 +43,7 @@ var usersController = {
   },
 
 
-  //user deletion                   MIDDLEWARE
+  //user deletion                   
   userDelete: (req, res) => {
     User.remove({ _id: req.params.userId })
       .exec()
