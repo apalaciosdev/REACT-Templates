@@ -1,25 +1,19 @@
-'use strict'
-
-// Cargar modulos de node
 var express = require('express');
 var bodyParser = require('body-parser');
-
-
-// Ejecutar express (http)
 var app = express();
 
 
-// Cargar ficheros rutas
+// ROUTES
 var users_routes = require('./routes/users');
 var posts_routes = require('./routes/posts');
 
 
-// Cargar Middlewares
+// MIDDLEWARES
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 
-// Cors
+// CORS
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
@@ -29,10 +23,9 @@ app.use((req, res, next) => {
 });
 
 
-//Añadir prefijos a rutas / Cargar rutas
+// LOAD ROUTES
 app.use(users_routes);
 app.use(posts_routes);
 
 
-//Exportación de módulo
 module.exports = app;

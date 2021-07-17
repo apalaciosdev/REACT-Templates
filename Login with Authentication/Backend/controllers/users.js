@@ -1,13 +1,13 @@
-const express = require('express')
-const router = express()
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
-const checkAuth = require('../middlewares/auth')
-require('dotenv').config()
+const express = require('express');
+const router = express();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const checkAuth = require('../middlewares/auth');
+require('dotenv').config();
 
 
 
-const User = require('../models/user')
+const User = require('../models/user');
 
 
 var usersController = {
@@ -92,6 +92,6 @@ var usersController = {
         res.status(500).json({ error: err })
       })
   }
-}
+};
 
-module.exports = usersController
+module.exports = usersController;

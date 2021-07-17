@@ -16,6 +16,6 @@ router.post('/posts/new', checkAuth, (req, res) => {
         console.log(err)
         res.status(500).json({error: err})
       })
-})
+});
 
 module.exports = router;
