@@ -7,7 +7,7 @@ POST http://localhost:2022/user/registration
 Content-Type: application/json
 
 {
-  "email": "septimo@gmail.com",
+  "email": "11@gmail.com",
   "password": "SECRETOS"
 }
 
