@@ -5,9 +5,8 @@ const jwt = require('jsonwebtoken')
 const checkAuth = require('../middlewares/auth')
 require('dotenv').config()
 
-
-
 var usersController = require('../controllers/users')
+
 
 router.post('/user/registration', usersController.userRegistration)
 router.delete('/user/delete/:userId', checkAuth, usersController.userDelete)
